@@ -1,12 +1,13 @@
 import React from "react";
-import { ThemeProvider, CSSReset } from "@chakra-ui/core";
-import SearchForm from "./features/search-form/SearchForm";
+import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
+import Home from "./features/home/Home";
 
 export default function App() {
   return (
-    <ThemeProvider>
-      <CSSReset />
-      <SearchForm />
-    </ThemeProvider>
+    <Router>
+      <Switch>
+        <Route path="/" exact component={Home} />
+      </Switch>
+    </Router>
   );
 }
